@@ -1,0 +1,367 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/slide-institute/uulm-128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide class="logoslide nobackground" style="background:black !important;">
+    <article class="flexbox vcenter">
+      <span><img src="images/datalove.svg" style="width:302px !important;height:300px !important;"></span>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <span><img src="images/ulmapi.svg" style="width:302px !important;height:300px !important;"></span>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft auto-fadein">
+      <h2>Falco Nogatz</h2>
+      <p>Datalove University Group&nbsp;&nbsp;|&nbsp;&nbsp;UlmAPI&nbsp;&nbsp;|&nbsp;&nbsp;OK Lab Ulm</p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/slide-institute/uulm-128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Inspiration</h2>
+      <h3>Collections of Existing Applications</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://ulmapi.de">ulmapi.de</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://ulmapi.de/"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://codefor.de/projekte/">codefor.de</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://codefor.de/projekte/"></iframe>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/slide-institute/uulm-128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Overview</h2>
+      <h3>Examples of possible data</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Examples of possible data</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <ul class="build" style="font-size:40px;">
+        <li>Geodata</li>
+        <li>Public transport</li>
+        <li>Statistics</li>
+        <li>Budget &amp; Finance data</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/slide-institute/uulm-128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Geodata</h2>
+      <h3>openstreetmap.org</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://openstreetmap.org">openstreetmap.org</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://openstreetmap.de/karte.html?zoom=15&lat=48.40601&lon=9.99444&layers=B0000TF"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://www.ulmapi.de/uulm-map/">uulm-map</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.ulmapi.de/uulm-map/"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Overpass API</h2>
+      <h3>Source snippet of <a href="http://www.ulmapi.de/uulm-map/">uulm-map</a></h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="javascript">
+var postboxes = new L.OverPassLayer({
+      minzoom: 15,
+      query: "node(BBOX)[amenity=post_box];out;",
+      callback: function(data) {
+        ...
+      }
+})
+</pre>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://www.ulmapi.de/project/2013/03/09/oeffnungszeiten.html">oeffnungszeiten</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.ulmapi.de/project/2013/03/09/oeffnungszeiten.html"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://kiez-karte.berlin/?lat=52.5158&lng=13.4794&zoom=16&layer=18,6">kiez-karte.berlin</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://kiez-karte.berlin/?lat=52.5158&lng=13.4794&zoom=16&layer=18,6"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://codefor.de/projekte/2014-11-05-flaechentool.html">Flächentool</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://codefor.de/projekte/2014-11-05-flaechentool.html"></iframe>
+    </article>
+  </slide>
+
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/slide-institute/uulm-128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Geodata</h2>
+      <h3>City of Ulm, daten.ulm.de</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://click-that-hood.com/ulm">Click-that-hood</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://click-that-hood.com/ulm"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://daten.ulm.de/datenkatalog/offene_daten/44">daten.ulm.de</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://daten.ulm.de/datenkatalog/beliebte_offene_daten"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://daten.ulm.de/datenkatalog/offene_daten/44">daten.ulm.de</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://daten.ulm.de/datenkatalog/offene_daten/44"></iframe>
+    </article>
+  </slide>
+
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/slide-institute/uulm-128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Public Transport Data</h2>
+      <h3>Stadtwerke Ulm, swu.de</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2>GTFS by <a href="http://www.swu.de/privatkunden/swu-nahverkehr/gtfs-daten.html">swu.de</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.swu.de/privatkunden/swu-nahverkehr/gtfs-daten.html"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="https://www.npmjs.com/package/transportation">transportation</a> @ npm</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="https://www.npmjs.com/package/transportation"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://www.mapnificent.net/ulm/">mapnificent.net/ulm</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.mapnificent.net/ulm/"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://live.ulmapi.de/map">live.ulmapi.de</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://live.ulmapi.de/map"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://h.fs-et.de/1240">h.fs-et.de</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://h.fs-et.de/1240"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://www.uni-ulm.de/?streiflicht2015#c381866">Streiflicht</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.uni-ulm.de/?streiflicht2015#c381866"></iframe>
+    </article>
+  </slide>
+
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/slide-institute/uulm-128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Public Transport Data</h2>
+      <h3><a href="https://github.com/schildbach/public-transport-enabler">Public Transport Enabler</a></h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2><a href="https://medium.com/@highsource/reliable-train-connections-app-wins-the-first-deutsche-bahn-hackathon-3419ef275bfc">Example: DB Hackathon</a></h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/dbhackathon.png" alt="Description" title="Description">
+      <footer class="source">source: <a href="https://medium.com/@highsource/reliable-train-connections-app-wins-the-first-deutsche-bahn-hackathon-3419ef275bfc">Aleksei Valikov</a></footer>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="https://twitter.com/letsdev/status/579306076065103873">Example: DB Hackathon</a></h2>
+    </hgroup>
+    <article>
+      <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Some impressions of our <a href="https://twitter.com/hashtag/Smartwatch?src=hash">#Smartwatch</a> showcase for traveling with <a href="https://twitter.com/hashtag/DeutscheBahn?src=hash">#DeutscheBahn</a> <a href="https://twitter.com/hashtag/DBHackathon?src=hash">#DBHackathon</a> <a href="http://t.co/DXb8eckgBb">pic.twitter.com/DXb8eckgBb</a></p>&mdash; let&#39;s dev (@letsdev) <a href="https://twitter.com/letsdev/status/579306076065103873">March 21, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </article>
+  </slide>
+
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/slide-institute/uulm-128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Communal Data</h2>
+      <h3>City of Ulm</h3>
+    </hgroup>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://www.ulmapi.de/kleinerspatz/">kleinerspatz</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.ulmapi.de/kleinerspatz/"></iframe>
+    </article>
+  </slide>
+
+  <slide class="">
+    <hgroup>
+      <h2><a href="http://daten.ulm.de/datenkatalog/statistik">Statistisches Jahrbuch</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://daten.ulm.de/datenkatalog/statistik"></iframe>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft">
+      <h2>Thank you!</h2>
+      <br /> <br /> <br />
+
+      <pre class="prettyprint questions" data-lang="javascript" >
+me.ask(questions);
+      </pre>
+
+	<br/> <br/> <br/>
+
+	<p style="font-size:0.7em;text-align:right;">
+      <img src="images/by.svg" style="float:right;margin-left:25px;" />
+      This presentation is licensed under the <br />
+      <a style="color:white;" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a> 
+      license.
+      </p>
+
+    </article>
+    <p class="auto-fadein" data-config-contact style="display:none;">
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
