@@ -2,6 +2,13 @@
 
 ---
 
+**Open Data Showcase, SS15**
+Lecture Mobile & Ubiquitous Computing, 30 minutes.
+University of Ulm, 03.06.2015
+[View the slides](http://ulmapi.github.io/talks/muc-showcase-ss15)
+
+---
+
 **Erstsemester-Einfuehrung SS15**  
 Simple overview on UlmAPI, 10 minutes.   
 University of Ulm, 09.04.2015  
